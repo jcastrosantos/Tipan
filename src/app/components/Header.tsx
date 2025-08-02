@@ -4,7 +4,7 @@ import TipanLogo from "./Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleLinkClick = (event) => {
+  const handleLinkClick = (event: React.MouseEvent) => {
     event.preventDefault();
 
     setIsOpen(false);
