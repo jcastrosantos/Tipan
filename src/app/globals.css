@@ -1,26 +1,123 @@
+@import url("https://db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=Proxima+N+W01+Reg");
 @import "tailwindcss";
 
+@import "aos/dist/aos.css";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background-color-blue: #1e324a;
+  --background-color-white: #ffffff;
+  --background-color-off-white: #f8f8f8;
+  --background-color-gray-opacity: #1e324a91;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --text-color-white: #ffffff;
+  --text-color-black: #414141;
+  --text-color-gray: #7d7d7d;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --text-color-title-blue: #1e324a;
+  --text-color-title-white: #ffffff;
+  --text-color-title-red: #8b0000;
 
+  --text-color-gray-hover: #7d7d7d;
+  --text-color-red-focus: #7c1313;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/ef9ce3e48be340a4b91f0c3e1644aa5b.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--background-color-white);
+}
+
+nav li:not(:last-child) {
+  position: relative;
+}
+nav li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: var(--text-color-gray);
+}
+nav li {
+  margin-right: 32px; 
+}
+nav li:hover {
+  color: var(--text-color-gray-hover);
+  transition: color 0.5s ease;
+}
+
+#principios li {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+h4 {
+  font-size: 48px;
+  font-family: var(---font-open-sans);
+  font-weight: 600;
+  position: relative;
+  line-height: normal;
+}
+.h4--blue {
+  color: var(--text-color-title-blue);
+}
+.h4--white {
+  color: var(--text-color-title-white);
+}
+p {
+  font-family: "Proxima N W01 Reg";
+  font-size: 16px;
+  letter-spacing: normal;
+}
+.vertical-line {
+  border-left: 9px solid;
+  height: 83px;
+  margin-right: 15px;
+}
+.vertical-line--blue {
+  border-left: 9px solid;
+  height: 83px;
+  margin-right: 15px;
+  border-color: var(--background-color-blue);
+}
+.vertical-line--white {
+  border-left: 9px solid;
+  height: 83px;
+  margin-right: 15px;
+  border-color: var(--background-color-white);
+}
+#contato div p {
+  font-size: 18px;
+  font-family: var(---font-open-sans);
+  font-weight: 200;
+  line-height: 25.2px;
+}
+#contato div span {
+  font-size: 18px;
+  font-family: var(---font-open-sans);
+  font-weight: 700;
+  line-height: 25.2px;
+}
+footer .numeros {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .numeros span {
+  border-right: 1px solid #7d7d7d;
+  padding-right: 15px;
+}
+footer .numeros span:last-child {
+  border-right: none;
+  padding-right: 15px;
 }
