@@ -10,6 +10,14 @@ const Header = () => {
     setIsOpen(false);
 
     const targetId = event.currentTarget.getAttribute("href").substring(1);
+    if (targetId) { // Ou if (targetId !== null)
+    
+    console.log("ID do alvo:", targetId);
+    
+  } else {
+    console.warn("Atributo 'data-target-id' não encontrado no elemento clicado.");
+  
+  }
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
