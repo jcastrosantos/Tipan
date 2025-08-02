@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import TipanLogo from "./Logo.tsx";
+import TipanLogo from "./Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
