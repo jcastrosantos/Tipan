@@ -1,5 +1,4 @@
-import React from "react";
-import TipanLogo from "./Logo.tsx";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -7,7 +6,6 @@ const Footer = () => {
       {/* O contêiner ocupa toda a largura em telas pequenas e se limita em telas maiores */}
       {/* Em telas pequenas, os itens se alinham ao centro e se empilham verticalmente */}
       <div className="container mx-auto w-full max-w-[1280px] flex flex-col md:flex-row items-center md:justify-between px-4 font-bold gap-8">
-        
         {/* Bloco de Endereço */}
         <div className="endereco flex flex-col text-sm text-center md:text-left">
           <span>Rua Cláudio Soares, 72 - 8º Andar</span>
@@ -33,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="logo">
-            <TipanLogo alt="Tipan Logo" width={109} height={104} />
+            <Logo alt="Tipan Logo" width={109} height={104} />
           </div>
         </div>
       </div>

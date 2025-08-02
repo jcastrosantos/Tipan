@@ -1,5 +1,4 @@
-
-const TipanLogo = (props) => (
+const Logo = (props) => (
   <svg
     preserveAspectRatio="xMidYMid meet"
     data-bbox="1 1.021 831.917 831.833"
@@ -172,4 +171,4 @@ const TipanLogo = (props) => (
   </svg>
 );
 
-export default TipanLogo;
+export default Logo;

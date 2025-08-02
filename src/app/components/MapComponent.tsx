@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useCallback } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 // Defina o tamanho padrão do mapa
