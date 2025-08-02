@@ -9,7 +9,7 @@ const Header = () => {
 
     setIsOpen(false);
 
-    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetId = event.currentTarget?.getAttribute("href").substring(1);
     if (targetId) { // Ou if (targetId !== null)
     
     console.log("ID do alvo:", targetId);
