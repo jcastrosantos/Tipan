@@ -1,11 +1,17 @@
 import React from "react";
 
-const LifeInsuranceIcon = ({
+interface LifeInsuranceProps {
+  className?: string;
+  width?: number;
+  height?: number;
+  fillOuter?: string;
+  fillHeart?: string;
+}
+const LifeInsuranceIcon: React.FC<LifeInsuranceProps> = ({
   width = 90,
   height = 90,
   fillOuter = "#f8ffff", // Cor das mãos e do círculo
   fillHeart = "#f8ffff", // Cor do coração
-  
 }) => {
   return (
     <div className="wixui-vector-image">
@@ -21,7 +27,6 @@ const LifeInsuranceIcon = ({
           role="presentation"
           aria-hidden="true"
           aria-label=""
-
         >
           <g>
             {/* O path do coração */}

@@ -149,7 +149,7 @@ export default function Home() {
             {/* Container do Grid de Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card
-                icon={<SmallPlan className=" " />}
+                icon={<SmallPlan />}
                 title="Planos de Saúde"
                 subtitle="Pequenas Empresas"
                 description={[
@@ -162,7 +162,7 @@ export default function Home() {
                 backgroundColor="#ffffff"
               />
               <Card
-                icon={<MdPlan className="" />}
+                icon={<MdPlan  />}
                 title="Planos de Saúde"
                 subtitle="Médias e Grandes Empresas"
                 description={[
@@ -188,7 +188,7 @@ export default function Home() {
                 backgroundColor="#1f3149"
               />
               <Card
-                icon={<DentalPlan className="" />}
+                icon={<DentalPlan  />}
                 title="Plano Odontológico"
                 subtitle="Empresarial"
                 description={[

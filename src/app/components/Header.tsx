@@ -9,18 +9,23 @@ const Header = () => {
 
     setIsOpen(false);
 
-    const targetId = event.currentTarget?.getAttribute("href").substring(1);
-    if (targetId) { // Ou if (targetId !== null)
-    
-    console.log("ID do alvo:", targetId);
-    
-  } else {
-    console.warn("Atributo 'data-target-id' não encontrado no elemento clicado.");
-  
-  }
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+    const href = event.currentTarget?.getAttribute("href");
+    let targetId: string | null = null;
+
+    if (href) {
+      targetId = href.substring(1);
+    }
+
+    if (targetId) {
+      console.log("ID do alvo:", targetId);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      console.warn(
+        "Atributo 'href' ou ID do alvo não encontrado no elemento clicado."
+      );
     }
   };
 
@@ -29,7 +34,7 @@ const Header = () => {
       <div className="mx-auto w-full flex items-center justify-between  md:max-w-[85%] lg:max-w-[80%] xl:max-w-[55%]">
         {/* Lado esquerdo: Logo */}
         <a href="#inicio" onClick={handleLinkClick} className="flex-shrink-0 ">
-          <TipanLogo alt="Tipan Logo" width={110} height={110} />
+          <TipanLogo width={110} height={110} />
         </a>
 
         <div className="hidden md:flex flex-col items-center flex-grow-0 ">

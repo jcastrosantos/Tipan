@@ -1,6 +1,15 @@
 import React from "react";
-
-const MdPlan = ({
+interface MdPlanProps {
+  className?: string;
+  width1?: number;
+  height1?: number;
+  marginTop1?: number;
+  width2?: number;
+  height2?: number;
+  marginTop2?: number;
+  Color?: string;
+}
+const MdPlan: React.FC<MdPlanProps> = ({
   width1 = 40,
   height1 = 40,
   marginTop1 = 0,

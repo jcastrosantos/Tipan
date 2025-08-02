@@ -1,4 +1,5 @@
-const Logo = (props) => (
+import React from "react";
+const Logo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     preserveAspectRatio="xMidYMid meet"
     data-bbox="1 1.021 831.917 831.833"

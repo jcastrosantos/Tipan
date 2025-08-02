@@ -1,6 +1,16 @@
 import React from 'react';
 
-const SmallPlan = ({
+interface SmallPlanProps {
+  className?: string;
+  width1?: number;
+  height1?: number;
+  marginTop1?: number;
+  width2?: number;
+  height2?: number;
+  marginTop2?: number;
+}
+
+const SmallPlan: React.FC<SmallPlanProps> = ({
   width1 = 40,
   height1 = 40,
   marginTop1 = 0, 

@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="logo">
-            <Logo alt="Tipan Logo" width={109} height={104} />
+            <Logo width={109} height={104} />
           </div>
         </div>
       </div>

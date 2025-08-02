@@ -1,6 +1,14 @@
 import React from "react";
 
-const DentalPlan = ({
+interface DentalPlanProps {
+  className?: string;
+  width?: number;
+  height?: number;
+  handColor?: string;
+  plusColor?: string;
+}
+
+const DentalPlan: React.FC<DentalPlanProps> = ({
   width = 90,
   height = 90,
   handColor = "#1f3149",

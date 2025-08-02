@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useCallback } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 // Defina o tamanho padrão do mapa
@@ -23,17 +23,12 @@ const MapComponent: React.FC<MapComponentProps> = ({ apiKey }) => {
     googleMapsApiKey: apiKey,
   });
 
-  // const [map, setMap] = useState<google.maps.Map | null>(null);
-
-  const onLoad = useCallback(function callback(map: google.maps.Map) {
+  const onLoad = useCallback(function callback(mapInstance: google.maps.Map) {
     const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-    // setMap(map);
+    mapInstance.fitBounds(bounds);
   }, []);
 
-  const onUnmount = useCallback(function callback(map: google.maps.Map) {
-    setMap(map);
-  }, []);
+  const onUnmount = useCallback(function callback() {}, []);
 
   if (loadError) return <div>Erro ao carregar o mapa: {loadError.message}</div>;
   if (!isLoaded) return <div>Carregando Mapa...</div>;
