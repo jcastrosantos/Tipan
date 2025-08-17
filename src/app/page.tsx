@@ -53,8 +53,8 @@ export default function Home() {
               <div className="flex items-start pt-10">
                 <div className="vertical-line--blue"></div>
                 <div className="flex flex-col gap-5">
-                  <h4 className="h4--blue">A Empresa</h4>
-                  <h5 className="text-[var(--text-color-title-red)] text-[25px] font-bold">
+                  <h4 className="h4--blue mb-4">A Empresa</h4>
+                  <h5 className="text-[var(--text-color-title-blue)] text-[25px] font-bold">
                     Desde 1996
                   </h5>
                   <p>
@@ -159,7 +159,7 @@ export default function Home() {
                 ]}
                 data-aos="flip-down"
                 data-aos-delay="100"
-                backgroundColor="#ffffff"
+                backgroundColor="transparent"
               />
               <Card
                 icon={<MdPlan  />}
@@ -175,7 +175,7 @@ export default function Home() {
                 backgroundColor="#1f3149"
               />
               <Card
-                icon={<LifeInsurance className="text-[60px] " />}
+                icon={<LifeInsurance className="text-[35px] " />}
                 title="Seguro de Vida"
                 subtitle="Empresarial"
                 description={[
@@ -198,7 +198,7 @@ export default function Home() {
                 ]}
                 data-aos="flip-down"
                 data-aos-delay="100"
-                backgroundColor="#ffffff"
+                backgroundColor="transparent"
               />
             </div>
           </div>

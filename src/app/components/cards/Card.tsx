@@ -30,16 +30,18 @@ const Card: React.FC<CardProps> = ({
       className={`
       ${className || ""} 
        p-6  bg-[var(--background-color-off-white)] 
-      flex flex-col items-center text-center 
+      flex flex-col items-center text-start 
     `}
-      
       {...aosProps}
     >
-      <div className="flex flex-row items-baseline-last justify-items-start gap-4 mb-4 w-full">
-        <div className="icon w-[120px] h-[120px] flex items-center justify-center border-2 border-[#1f3149]" style={{ backgroundColor: backgroundColor || "#1f3149" }}>
+      <div className="flex flex-row items-center gap-4 mb-4 w-full">
+        <div
+          className="icon w-[80px] h-[80px] flex items-center justify-center border-2 border-[#1f3149]"
+          style={{ backgroundColor: backgroundColor || "#1f3149" }}
+        >
           {icon}
         </div>
-        <div className="title flex flex-col items-start font-bold leading-[1.5em] text-[var(--text-color-title-blue)] flex-grow">
+        <div className="flex flex-col items-start font-bold leading-[1.5em] text-[var(--text-color-title-blue)] ">
           <span className="text-[22px] font-sans">{title.toUpperCase()}</span>
           <span className="text-[18px]">{subtitle.toUpperCase()}</span>
         </div>

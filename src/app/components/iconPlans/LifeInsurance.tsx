@@ -8,8 +8,8 @@ interface LifeInsuranceProps {
   fillHeart?: string;
 }
 const LifeInsuranceIcon: React.FC<LifeInsuranceProps> = ({
-  width = 90,
-  height = 90,
+  width = 70,
+  height = 70,
   fillOuter = "#f8ffff", // Cor das mãos e do círculo
   fillHeart = "#f8ffff", // Cor do coração
 }) => {

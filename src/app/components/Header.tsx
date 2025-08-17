@@ -37,8 +37,8 @@ const Header = () => {
           <TipanLogo width={110} height={110} />
         </a>
 
-        <div className="hidden md:flex flex-col items-center flex-grow-0 ">
-          <nav className="flex gap-8 mb-2">
+        <div className="hidden md:flex flex-col items-center flex-grow justify-center">
+          <nav className="flex my-9">
             <ul className="flex items-center text-base font-semibold">
               <li className="nav-item-divider">
                 <a href="#empresa" onClick={handleLinkClick}>
