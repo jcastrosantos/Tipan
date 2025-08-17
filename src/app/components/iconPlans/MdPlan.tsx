@@ -1,8 +1,8 @@
 import React from "react";
 interface MdPlanProps {
   className?: string;
-  width1?: number;
-  height1?: number;
+  width?: number;
+  height?: number;
   marginTop1?: number;
   marginTop2?: number;
   color?: string;
