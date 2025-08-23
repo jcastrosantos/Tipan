@@ -68,11 +68,11 @@ const Header = () => {
             </ul>
           </nav>
           <span className="text-sm md:text-lg font-bold text-nowrap">
-            Corretora de Seguros e Consultoria
+            Corretora de Seguros & Consultoria Especializada
           </span>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center md:w-[110px] md:justify-end">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-[var(--background-color-blue)] hover:border-[var(--background-color-blue)]"

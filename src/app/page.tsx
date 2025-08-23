@@ -3,11 +3,12 @@ import Image from "next/image";
 import ReuNegoc from "./assets/reuniao_de_negocios.jpeg";
 import HandsTogether from "./assets/handsTogether.jpeg";
 // icons
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 // components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/cards/Card";
+import FloatingButton from "./components/FloatingButton";
 import MapComponent from "./components/MapComponent";
 import SmallPlan from "./components/iconPlans/SmallPlan";
 import MdPlan from "./components/iconPlans/MdPlan";
@@ -15,6 +16,12 @@ import LifeInsurance from "./components/iconPlans/LifeInsurance";
 import DentalPlan from "./components/iconPlans/DentalPlan";
 
 export default function Home() {
+  const whatsappNumber = "5521999999999";
+  const defaultMessage =
+    "Olá, gostaria de obter maiores detalhes, vamos conversar?";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    defaultMessage
+  )}`;
   const Maps_API_KEY = process.env.NEXT_PUBLIC_Maps_API_KEY || "";
   return (
     <div className="body">
@@ -26,17 +33,17 @@ export default function Home() {
             <div className="w-full h-full flex flex-col md:flex-row">
               <div className="w-full md:w-1/2 h-full bg-[var(--background-color-gray-opacity)] flex items-center justify-center">
                 <p className="text-justify text-lg text-[var(--text-color-white)] p-6">
-                  A <b>Tipan</b> tem como objetivo oferecer atendimento
-                  diferenciado as empresas na gestão de pacote de benefícios
+                  A <b>Tipan</b> tem como objetivo oferecer um atendimento
+                  diferenciado às empresas na gestão de pacotes de benefícios
                   relacionados a seguros.
                   <br />
                   <br />
-                  Desde sua fundação, a Tipan manteve a característica de
-                  conhecer integralmente a cultura de cada empresa visando
-                  atender com excelência as necessidades de cada cliente.
+                  Desde sua fundação, a Tipan mantém a característica de
+                  conhecer integralmente a cultura de cada empresa, visando
+                  atender com excelência às necessidades de cada cliente.
                   <br />
                   <br />
-                  Para nós, <b>PARCERIA só tem data de início.</b>
+                  Para nós, <b>PARCERIA só tem data de início!</b>
                 </p>
               </div>
               <div className="w-1/2 h-full hidden md:block"></div>
@@ -63,16 +70,16 @@ export default function Home() {
                     e nas necessidades de cada cliente.
                     <br />
                     <br />
-                    Atuando de forma transparente e ética, comunicando de forma
-                    clara e objetiva, construímos relacionamentos de longo
-                    prazo, que impulsionam nossas vendas, através de indicações
-                    e recomendações.
+                    Atuando com transparência, ética e com uma comunicação clara
+                    e objetiva, construímos relacionamentos de longo prazo que
+                    impulsionam nossas vendas através de indicações e
+                    recomendações.
                     <br />
                     <br />
                     Com constantes investimentos em tecnologia e em pessoas,
-                    realizamos continuamente adaptações de nossos serviços, afim
-                    de atendermos nossos clientes com excelência e acompanharmos
-                    as mudanças e a evolução tecnológica do mercado.
+                    realizamos adaptações nossos serviços, a fim de atender
+                    nossos clientes com excelência e as mudanças e a evolução
+                    tecnológica do mercado.
                   </p>
                 </div>
               </div>
@@ -100,21 +107,20 @@ export default function Home() {
                   <h4 className="h4--white">Equipe</h4>
                   <p>
                     Os planos de saúde e odontológicos são fortemente regulados.
-                    A edição frequente de Normas, visa atender as necessidades
-                    do mercado e adequar as coberturas obrigatórias à
+                    A edição frequente de normas visa atender às necessidades do
+                    mercado e adequar as coberturas obrigatórias à
                     jurisprudência e à evolução da medicina.
                     <br />
                     <br />
                     Essa dinâmica regulatória nos direciona a investimentos e
-                    treinamentos para atualização de nossa equipe, o que
-                    contribuiu para prestação de serviço com excelência.
+                    treinamentos para a atualização de nossa equipe, o que
+                    contribui para a prestação de serviços com excelência.
                     <br />
                     <br />
                     Nossos colaboradores são diferenciados e preparados para as
-                    mudanças, para acompanharem a evolução regulatória e
-                    tecnológica do mercado, que altera constantemente nossa
-                    forma de atuar, bem como os direitos e obrigações de nossos
-                    clientes.
+                    mudanças, evolução regulatória e tecnológica do mercado, que
+                    nossa forma de atuar, bem como os direitos e obrigações de
+                    nossos clientes.
                     <br />
                     <br />
                     Conhecimento, resiliência, empatia e ética são a base de
@@ -153,22 +159,23 @@ export default function Home() {
                 title="Planos de Saúde"
                 subtitle="Pequenas Empresas"
                 description={[
-                  `Nossa experiência e transparência apoiam pequenas empresas na contratação e utilização de um plano de saúde que atende às necessidades dos sócios e seus colaboradores.`,
-                  `Muitas pessoas enfrentam dificuldades para utilizar o plano de saúde, não encontram quem esclareça seus direitos, bem como explique os processos e caminhos para utilização.`,
-                  `Nosso suporte pós-vendas, exclusivo para nossos clientes, otimiza a utilização dos planos e serviços contratados, visando facilitar a utilização.`,
+                  `Nossa experiência e transparência apoiam pequenas empresas na contratação e utilização de planos de saúde que atendem às necessidades dos sócios e de seus colaboradores.`,
+                  `Muitas pessoas enfrentam dificuldades para utilizar o plano de saúde,   não encontrarem quem esclareça seus direitos
+                  sobre os processos e caminhos de utilização.`,
+                  `Nosso suporte pós-venda, exclusivo para clientes, otimiza o uso dos planos e serviços contratados, facilitando sua utilização.`,
                 ]}
                 data-aos="flip-down"
                 data-aos-delay="100"
                 backgroundColor="transparent"
               />
               <Card
-                icon={<MdPlan  />}
+                icon={<MdPlan />}
                 title="Planos de Saúde"
                 subtitle="Médias e Grandes Empresas"
                 description={[
-                  `Além do entendimento do benefício contratado, as médias e grandes empresas se deparam com o desafio de maximizar os benefícios com os recursos financeiros disponíveis.`,
-                  `Nossa experiência, consolidada ao longo desses anos de atuação, nos diferencia para apoiar nossos clientes nas negociações.`,
-                  `Buscamos otimizar o benefício disponibilizado aos colaboradores de forma personalizada, considerando o perfil populacional e de utilização, o orçamento e as necessidades específicas da empresa e seus colaboradores.`,
+                  `Além de compreender o benefício contratado, as médias e grandes empresas se deparam com o desafio de maximizar os benefícios com os recursos financeiros disponíveis.`,
+                  `Nossa experiência, consolidada ao longo desses anos de atuação, nos diferencia no apoio às negociações de nossos clientes.`,
+                  `Buscamos otimizar os benefícios oferecidos aos colaboradores de forma personalizada, considerando o perfil populacional e de utilização, o orçamento e as necessidades específicas da empresa e de seus colaboradores.`,
                 ]}
                 data-aos="flip-down"
                 data-aos-delay="100"
@@ -179,20 +186,20 @@ export default function Home() {
                 title="Seguro de Vida"
                 subtitle="Empresarial"
                 description={[
-                  `O seguro de vida é um benefício importante, que garante à família do colaborador tranquilidade em caso de evento coberto.`,
-                  `Para a empresa, é uma ferramenta de retenção e sua contratação tranquiliza a todos em momentos de grande fragilidade emocional.`,
-                  `Apoiamos as empresas para a correta contratação e divulgação do benefício.`,
+                  `O seguro de vida é um benefício importante, que garante tranquilidade à família do colaborador em caso de evento coberto.`,
+                  `Para a empresa, é uma ferramenta de retenção e sua contratação transmite segurança a todos em momentos de grande fragilidade emocional.`,
+                  `Apoiamos as empresas na correta contratação e na adequada divulgação desse benefício.`,
                 ]}
                 data-aos="flip-down"
                 data-aos-delay="100"
                 backgroundColor="#1f3149"
               />
               <Card
-                icon={<DentalPlan  />}
+                icon={<DentalPlan />}
                 title="Plano Odontológico"
                 subtitle="Empresarial"
                 description={[
-                  `Apoiamos nossos clientes na escolha e gestão do plano odontológico, benefício de baixo custo, onde as empresas habitualmente são facilitadoras do acesso.`,
+                  `Apoiamos nossos clientes na escolha e na gestão do plano odontológico, um benefício de baixo custo em que as empresas atuam, habitualmente, como facilitadoras do acesso.`,
                   `O plano odontológico visa garantir acesso à saúde bucal aos colaboradores da empresa.`,
                   `A contratação deve considerar o custo e a facilidade de utilização.`,
                 ]}
@@ -215,18 +222,16 @@ export default function Home() {
                 <h4 className="h4--white">Princípios</h4>
                 <div>
                   <p className="mb-8">
-                    Não consideramos mérito; nossa premissa é que empresas são
-                    obrigadas a aplicar políticas:
+                    Não consideramos essas questões como mérito; nossa premissa
+                    é de que as empresas são obrigadas a aplicar políticas de:
                   </p>
                   <ul className="list-disc pl-6 ">
                     <li>de Compliance Corporativo</li>
-                    <li>Anti Corrupção</li>
-                    <li>
-                      Anti Terrorismo e adotar ações contra Lavagem de Dinheiro
-                    </li>
+                    <li>Anticorrupção</li>
+                    <li>Antiterrorismo e ações contra Lavagem de Dinheiro</li>
                     <li>Governança e boas práticas contábeis</li>
                     <li>Sustentabilidade</li>
-                    <li>Respeito a LGPD</li>
+                    <li>Respeito à LGPD</li>
                   </ul>
                 </div>
               </div>
@@ -246,11 +251,11 @@ export default function Home() {
                   <h4 className="h4--blue">Contato</h4>
                   <div className="flex flex-col my-10">
                     <p className="text-[var(--text-color-blue)] text-[18px] mb-7">
-                      Entre em contato conosco ou agende um call para falarmos
-                      melhor.
+                      Entre em contato conosco ou agende uma call para
+                      conversarmos melhor.
                     </p>
                     <a
-                      href="https://wa.me/551199999999"
+                      href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-5"
@@ -260,20 +265,32 @@ export default function Home() {
                         (11)99999-9999
                       </span>
                     </a>
-                    <div className="mb-10 flex flex-col gap-5">
+
+                    <div className="mb-5 flex flex-col gap-5">
                       <span className="text-[var(--text-color-blue)] text-[18px] flex gap-4">
                         <FaPhoneAlt className="text-[25px]" />
                         (11)59999-9999
                       </span>
                     </div>
+                    <a
+                      href="mailto:seuemail@suaempresa.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mb-5"
+                    >
+                      <span className="text-[var(--text-color-blue)] text-[18px] flex items-center gap-4">
+                        <FaEnvelope className="text-[25px]" />
+                        tipanemail@suaempresa.com
+                      </span>
+                    </a>
                   </div>
                   <div>
                     <h5 className="text-[var(--text-color-gray)] text-[23px]/[32.2px] font-bold">
                       Agende sua call
                     </h5>
                     <p>
-                      Informe um horário de preferência e agende um call com
-                      nossos especialistas.
+                      Informe um horário de preferência e marque uma conversa
+                      com nossos especialistas.
                     </p>
                   </div>
                 </div>
@@ -290,6 +307,7 @@ export default function Home() {
         </section>
       </div>
       <Footer />
+      <FloatingButton />
     </div>
   );
 }
