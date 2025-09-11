@@ -14,14 +14,10 @@ import SmallPlan from "./components/iconPlans/SmallPlan";
 import MdPlan from "./components/iconPlans/MdPlan";
 import LifeInsurance from "./components/iconPlans/LifeInsurance";
 import DentalPlan from "./components/iconPlans/DentalPlan";
+//hooks
+import useWhatsappLink from "./hooks/useWhatsappLink";
 
 export default function Home() {
-  const whatsappNumber = "5521999999999";
-  const defaultMessage =
-    "Olá, gostaria de obter maiores detalhes, vamos conversar?";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    defaultMessage
-  )}`;
   const Maps_API_KEY = process.env.NEXT_PUBLIC_Maps_API_KEY || "";
   return (
     <div className="body">
@@ -255,21 +251,21 @@ export default function Home() {
                       conversarmos melhor.
                     </p>
                     <a
-                      href={whatsappLink}
+                      href={useWhatsappLink()}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-5"
                     >
                       <span className="text-[var(--text-color-blue)] text-[18px] flex gap-4">
                         <FaWhatsapp className="text-[25px]" />
-                        (11)99999-9999
+                        (11) 9 8867-0660
                       </span>
                     </a>
 
                     <div className="mb-5 flex flex-col gap-5">
                       <span className="text-[var(--text-color-blue)] text-[18px] flex gap-4">
                         <FaPhoneAlt className="text-[25px]" />
-                        (11)59999-9999
+                        (11) 5904-9200
                       </span>
                     </div>
                     <a
@@ -280,14 +276,20 @@ export default function Home() {
                     >
                       <span className="text-[var(--text-color-blue)] text-[18px] flex items-center gap-4">
                         <FaEnvelope className="text-[25px]" />
-                        tipanemail@suaempresa.com
+                        comercial.web@tipan.com.br
                       </span>
                     </a>
                   </div>
                   <div>
-                    <h5 className="text-[var(--text-color-gray)] text-[23px]/[32.2px] font-bold">
-                      Agende sua call
-                    </h5>
+                    <a
+                      href={useWhatsappLink()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h5 className="text-[var(--text-color-gray)] text-[23px]/[32.2px] font-bold">
+                        Solicite uma conferência via web
+                      </h5>
+                    </a>
                     <p>
                       Informe um horário de preferência e marque uma conversa
                       com nossos especialistas.

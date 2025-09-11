@@ -1,10 +1,9 @@
 import Logo from "./Logo";
+import useWhatsappLink from "../hooks/useWhatsappLink";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[var(--background-color-white)] shadow-xl/20 text-[var(--text-color-title-blue)] py-8">
-      {/* O contêiner ocupa toda a largura em telas pequenas e se limita em telas maiores */}
-      {/* Em telas pequenas, os itens se alinham ao centro e se empilham verticalmente */}
       <div className="container mx-auto w-full max-w-[1280px] flex flex-col md:flex-row items-center md:justify-between px-4 font-bold gap-8">
         {/* Bloco de Endereço */}
         <div className="endereco flex flex-col text-sm text-center md:text-left">
@@ -21,13 +20,13 @@ const Footer = () => {
             </span>
             <div className="numeros flex flex-col">
               <a
-                href="https://wa.me/551199999999"
+                href={useWhatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>(11) 99999-9999</span>
+                <span>(11) 98867-0660</span>
               </a>
-              <span>(11) 59999-9999</span>
+              <span>(11) 5904-9200</span>
             </div>
           </div>
           <div className="logo">
