@@ -18,6 +18,9 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR">
+      <head>
+        <title>Tipan</title>
+      </head>
       <body>{children}</body>
     </html>
   );

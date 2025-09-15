@@ -1,3 +1,4 @@
+"use client";
 // images
 import Image from "next/image";
 import ReuNegoc from "./assets/reuniao_de_negocios.jpeg";
@@ -9,7 +10,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/cards/Card";
 import FloatingButton from "./components/FloatingButton";
-import MapComponent from "./components/MapComponent";
 import SmallPlan from "./components/iconPlans/SmallPlan";
 import MdPlan from "./components/iconPlans/MdPlan";
 import LifeInsurance from "./components/iconPlans/LifeInsurance";
@@ -18,7 +18,6 @@ import DentalPlan from "./components/iconPlans/DentalPlan";
 import useWhatsappLink from "./hooks/useWhatsappLink";
 
 export default function Home() {
-  const Maps_API_KEY = process.env.NEXT_PUBLIC_Maps_API_KEY || "";
   return (
     <div className="body">
       <Header />
@@ -86,6 +85,7 @@ export default function Home() {
                 alt="Reunião de Negócios"
                 className="object-cover w-[100%] h-[100%]"
                 unoptimized={true}
+                priority
               />
             </div>
           </div>
@@ -113,8 +113,9 @@ export default function Home() {
                     contribui para a prestação de serviços com excelência.
                     <br />
                     <br />
-                    Nossos colaboradores são diferenciados e preparados para as
-                    mudanças, evolução regulatória e tecnológica do mercado, que
+                    Nossos colaboradores são diferenciados e preparados para
+                    acompanhar as mudanças, adaptando-se à evolução regulatória
+                    e tecnológica do mercado, que constantemente transforma
                     nossa forma de atuar, bem como os direitos e obrigações de
                     nossos clientes.
                     <br />
@@ -132,6 +133,7 @@ export default function Home() {
                 alt="Reunião de Negócios"
                 className="object-cover w-[100%] h-[100%]"
                 unoptimized={true}
+                priority
               />
             </div>
           </div>
@@ -156,8 +158,7 @@ export default function Home() {
                 subtitle="Pequenas Empresas"
                 description={[
                   `Nossa experiência e transparência apoiam pequenas empresas na contratação e utilização de planos de saúde que atendem às necessidades dos sócios e de seus colaboradores.`,
-                  `Muitas pessoas enfrentam dificuldades para utilizar o plano de saúde,   não encontrarem quem esclareça seus direitos
-                  sobre os processos e caminhos de utilização.`,
+                  `Muitas pessoas enfrentam dificuldades para utilizar o plano de saúde, seja por não encontrarem quem esclareça seus direitos ou por não terem acesso a explicações claras sobre os processos e caminhos de utilização.`,
                   `Nosso suporte pós-venda, exclusivo para clientes, otimiza o uso dos planos e serviços contratados, facilitando sua utilização.`,
                 ]}
                 data-aos="flip-down"
@@ -222,7 +223,7 @@ export default function Home() {
                     é de que as empresas são obrigadas a aplicar políticas de:
                   </p>
                   <ul className="list-disc pl-6 ">
-                    <li>de Compliance Corporativo</li>
+                    <li>Compliance Corporativo</li>
                     <li>Anticorrupção</li>
                     <li>Antiterrorismo e ações contra Lavagem de Dinheiro</li>
                     <li>Governança e boas práticas contábeis</li>
@@ -240,16 +241,28 @@ export default function Home() {
           className="w-full h-[600px] bg-[var(--background-color-off-white)] scroll-mt-[170px]"
         >
           <div className="mx-auto w-full max-w-[1280px] h-full flex flex-row text-[var(--text-color-title-blue)] px-4 mt-[77px]">
-            <div className="flex  h-full w-full md:w-[50%] p-6">
+            <div className="flex  h-full w-full md:w-[100%] p-6">
               <div className="flex items-start">
                 <div className="vertical-line--blue"></div>
                 <div className="flex flex-col justify-center gap-4">
                   <h4 className="h4--blue">Contato</h4>
                   <div className="flex flex-col my-10">
-                    <p className="text-[var(--text-color-blue)] text-[18px] mb-7">
-                      Entre em contato conosco ou agende uma call para
-                      conversarmos melhor.
-                    </p>
+                    <div className="w-full mb-10 md:w-[100%]">
+                      <a
+                        href={useWhatsappLink()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <h5 className="text-[var(--text-color-gray)] text-[23px]/[32.2px] font-bold">
+                          Solicite uma conferência via web
+                        </h5>
+
+                        <p>
+                          Entre em contato conosco ou agende uma call para
+                          conversarmos melhor.
+                        </p>
+                      </a>
+                    </div>
                     <a
                       href={useWhatsappLink()}
                       target="_blank"
@@ -280,28 +293,6 @@ export default function Home() {
                       </span>
                     </a>
                   </div>
-                  <div>
-                    <a
-                      href={useWhatsappLink()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <h5 className="text-[var(--text-color-gray)] text-[23px]/[32.2px] font-bold">
-                        Solicite uma conferência via web
-                      </h5>
-                    </a>
-                    <p>
-                      Informe um horário de preferência e marque uma conversa
-                      com nossos especialistas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-[50%] h-auto hidden md:block">
-              <div className="maps w-[350px] h-[400px] mt-[77px] mx-auto">
-                <div className="w-full h-full  min-h-[400px]">
-                  <MapComponent apiKey={Maps_API_KEY} />
                 </div>
               </div>
             </div>

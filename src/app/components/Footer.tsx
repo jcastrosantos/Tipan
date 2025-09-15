@@ -14,7 +14,7 @@ const Footer = () => {
 
         {/* Bloco de Contato e Logo */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className="contato flex flex-col text-sm text-center md:text-right">
+          <div className="contato flex flex-col text-sm text-center mb-1.5 md:text-right">
             <span className="mb-1">
               Tipan Corretora de Seguros e Consultoria
             </span>
@@ -29,7 +29,7 @@ const Footer = () => {
               <span>(11) 5904-9200</span>
             </div>
           </div>
-          <div className="logo">
+          <div className="logo hidden md:block">
             <Logo width={109} height={104} />
           </div>
         </div>
