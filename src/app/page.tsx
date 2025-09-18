@@ -257,10 +257,7 @@ export default function Home() {
                           Solicite uma conferência via web
                         </h5>
 
-                        <p>
-                          Entre em contato conosco ou agende uma call para
-                          conversarmos melhor.
-                        </p>
+                        <p>Entre em contato conosco, seja nosso cliente.</p>
                       </a>
                     </div>
                     <a
