@@ -279,7 +279,7 @@ export default function Home() {
                       </span>
                     </div>
                     <a
-                      href="mailto:seuemail@suaempresa.com"
+                      href="mailto:comercial.web@tipan.com.br"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mb-5"

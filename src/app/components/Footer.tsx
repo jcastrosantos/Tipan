@@ -6,12 +6,19 @@ const Footer = () => {
     <footer className="w-full bg-[var(--background-color-white)] shadow-xl/20 text-[var(--text-color-title-blue)] py-8">
       <div className="container mx-auto w-full max-w-[1280px] flex flex-col md:flex-row items-center md:justify-between px-4 font-bold gap-8">
         {/* Bloco de Endereço */}
-        <div className="endereco flex flex-col text-sm text-center md:text-left">
-          <span>Rua Cláudio Soares, 72 - 8º Andar</span>
-          <span>Pinheiros - São Paulo / SP</span>
-          <span>CEP 05422-030</span>
-        </div>
-
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Rua+Claudio+Soares,+72,+Pinheiros,+Sao+Paulo,+SP"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <address
+            className="endereco not-italic flex flex-col text-sm text-center md:text-left "
+          >
+            <span>Rua Cláudio Soares, 72 - 8º Andar</span>
+            <span>Pinheiros - São Paulo / SP</span>
+            <span>CEP 05422-030</span>
+          </address>
+        </a>
         {/* Bloco de Contato e Logo */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="contato flex flex-col text-sm text-center mb-1.5 md:text-right">
